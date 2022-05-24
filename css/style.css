@@ -1,0 +1,443 @@
+/*
+Theme Name:My Folio
+Author:My Folio
+Version:1.0.0
+
+CONTENT
+---------------
+   1. Common css
+   2. Nav section
+   3. Banner section
+*/
+
+
+
+/* Common css Start */
+body {
+   font-family: "Roboto", sans-serif;
+}
+h1,h2,h3,h4,h5,h6,
+p,
+ul,ol,
+span,
+small{
+   margin: 0;
+   padding: 0;
+}
+a,a:hover{
+   text-decoration: none;
+}
+.form-control{
+   border: none;
+}
+.form-control:focus{
+   box-shadow: none;
+   border: none;
+   border-color: transparent;
+}
+.preloader{
+   width: 100vw;
+   height: 100vh;
+   background-color: white;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 9999999;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ /* //Common css End */
+
+/*Nav section Start*/
+.header{
+   background-color: #02918c;
+   z-index: 9999;
+}
+.active_menu {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   animation: active_menu .5s ;
+   animation-fill-mode: forwards;
+ }
+ @keyframes active_menu {
+   0%{
+     top: -50%;
+   }
+   100%{
+     top: 0;
+     background-color: #02918c(231, 154, 10);
+   }
+ }
+#main_menu ul li a{
+   font-size: 12px;
+   font-weight: 800;
+   text-transform: uppercase;
+   color: #fff;
+   padding: 22px 25px;
+   transition: all .3s linear;
+}
+#main_menu ul li:hover a{
+   font-size: 17px;
+   background-color: #cfc91d;
+   padding: 10px 25px;
+   box-shadow: 0 0 7px 1px white;
+}
+/*Nav section End*/
+
+/*Banner section Start*/
+#banner .banner_slider_item{
+   height: 728px;
+   position: relative;
+   z-index: 1;
+   background-size: cover !important;
+   background-position: center !important;
+ }
+ #banner .banner_slider_item::after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(5, 5, 5, 0.6);
+   z-index: -1;
+ }
+  #banner .banner_slider_dot li{
+    display: inline-block;
+    margin: 0 8px;
+  }
+  #banner .banner_slider_dot{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 50px;
+  }
+  #banner .banner_slider_dot li button{
+    font-size: 0;
+    width: 25px;
+    height: 6px;
+    border-radius: 30%;
+    background: none;
+    border: 2px solid #cfc91d;
+    cursor: pointer;
+    transition: all linear .3s;
+  }
+  #banner .banner_slider_dot li.slick-active button,
+  #banner .banner_slider_dot li:hover button{
+    background-color: #cfc91d;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 7px 0px white;
+  }
+ #banner .banner_content{
+   color:#fff;
+}
+#banner .banner_content h4{
+   font-size: 30px;
+   font-weight: 400;
+}
+
+#banner .banner_content h1{
+   font-size: 68px;
+   font-weight: 800;
+   text-transform: uppercase;
+   letter-spacing: 30px;
+}
+#banner .banner_content p{
+   font-size: 18px;
+}
+
+#banner .banner_content img{
+   display: block;
+   margin: 52px auto;
+}
+#banner .banner_content a{
+   display: inline-block;
+   font-size: 14px;
+   letter-spacing: 4px;
+   text-transform: uppercase;
+   font-weight: 800;
+   color: white;
+   border: 2px solid #cfc91d;
+   padding: 10px 30px;
+   transition: all linear.4s;
+}
+#banner .banner_content a:hover{
+   background-color: #cfc91d;
+   color: black;
+   box-shadow: 0px 0px 7px 0px white;
+}
+/*Banner css End*/
+/*about css start*/
+#about{
+   padding: 90px 0;
+}
+#about .secInfo h2{
+   font-size: 46px;
+   font-weight: 800;
+   color: #02918c;
+}
+#about .secInfo p{
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 40px;
+   color: #7e8287;
+   margin: 0 auto;
+
+}
+#about span{
+   font-size: 23px;
+   font-weight: 800;
+}
+#about .about_item{
+   width: 25%;
+   color: #7e8287;
+   border-right: 1px solid #d9dbdb;
+   padding: 37px 65px;
+   margin-top: 80px;
+}
+#about .about_item i{
+   font-size: 25px;
+   color: #02918c;
+   cursor: pointer;
+}
+#about .about_item i:hover{
+   text-shadow: 0 0 3px black;
+}
+#about .about_item:last-child{
+   border-right-color: transparent;
+}
+#about .about_item h5{
+   font-size: 16px;
+   font-family: 800;
+   margin: 20px 0;
+}
+
+#about .about_item p{
+   font-size: 11px;
+   font-family: 800;
+   line-height: 21px;
+}
+
+/*about css end*/
+/*service css start*/
+#service{
+   padding: 90px 0;
+   background-image: url(../img/bg-srvc.png);
+   background-size: cover;
+   background-position: center;
+}
+#service .secInfo h2{
+   font-size: 46px;
+   font-weight: 800;
+   color: #02918c;
+}
+#service .secInfo p{
+   font-size: 16px;
+   line-height: 40px;
+   color: #7e8287;
+   margin: 0 auto;
+
+}
+#service .service_item h5{
+   font-size: 16px;
+   font-family: 800;
+   margin: 20px 0;
+}
+#service .secInfo p{
+   font-size: 16px;
+   font-weight: 800;
+}
+#service .service_item_container{
+   margin-top: 80px;
+}
+#service .service_item i{
+   font-size: 25px;
+   color: #02918c;
+   cursor: pointer;
+}
+#service .service_item i:hover{
+   text-shadow: 0 0 3px black;
+}
+#service .service_item p{
+   font-size: 11px;
+   line-height: 21px;
+   width: 160px;
+   margin: 25px 0;
+   color: #7e8287
+}
+#service{
+   position: relative;
+   z-index: 1; 
+}
+#service::after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(252, 247, 247, 0.616);
+   z-index: -1;
+ }
+/*service //css end*/
+/*myWork css start*/
+#mywork .secInfo{
+   padding: 50px 0;
+}
+#mywork .secInfo h2{
+   font-size: 46px;
+   font-weight: 800;
+   color: #02918c;
+}
+#mywork .secInfo p{
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 40px;
+   color: #7e8287;
+   margin: 0 auto;
+}
+#mywork .overlay_content p{
+   width: 330px;
+   padding: 10px 40px;  
+} 
+#mywork h2{
+    padding-top: 45px;
+}
+#mywork .sec_info  p{
+    padding-bottom: 20px;
+    padding-top: 15px;
+} 
+#mywork .mywork_item{
+    position: relative;
+}
+#mywork .mywork_item .overlay{
+    position: absolute;
+    color: #fff;
+    background-color: rgba(2,145,140,0.85);
+    left: 28px;
+    top: 28px;
+    right: 28px;
+    bottom: 28px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s linear;
+}
+#mywork .mywork_item:hover .overlay{
+    opacity: .9;
+    visibility: visible;
+    box-shadow: 1px 1px 6px 2px white;
+}
+#mywork .overlay_content a i{
+   margin-top: 18px;
+}
+#mywork .overlay_content a{
+   font-size: 25px;
+   color: #535114;
+   transition:all 0.3s linear;
+   background-color: white;
+   padding: 8px 10px;
+   border-radius: 50%;
+}
+#mywork .overlay_content a:hover{
+   background-color: #cfc91d;
+   color: white;
+   padding: 9px 10px;
+   border-radius: 50%;
+   box-shadow: 1px 1px 6px 2px white;
+}
+/* //mywork css end*/
+/*contact css start*/
+#contact .secInfo{
+   padding: 80px 0;
+}
+#contact .secInfo h2{
+   font-size: 46px;
+   font-weight: 800;
+   color: #02918c;
+}
+#contact .secInfo p{
+   font-size: 16px;
+   font-weight: 800;
+   line-height: 40px;
+   color: #7e8287;
+   margin: 0 auto;
+
+}
+#contact .contact_form{
+   background-color: #0b0b0b;
+   padding: 50px 0;
+}
+
+#contact .contact_form input,
+#contact .contact_form textarea{
+   display: block;
+   background: none;
+   margin: auto;
+   border: none; 
+   border-bottom: 1px solid #898989; 
+   color: white;
+   text-transform: uppercase;
+   text-align: center;
+   padding: 18px;
+   margin-top: 50px;
+   font-size: 16px;
+}
+
+#contact .contact_form textarea{
+   resize: none;
+   font-family: 'Open Sans', sans-serif;
+}
+#contact .contact_form button{
+   font-size: 15px;
+   font-weight: 800;
+   text-transform: uppercase;
+   background-color: #0b0b0b;
+   border: 3px solid #898989;
+   color: white;
+   padding: 12px 55px;
+   display: block;
+   margin: 50px auto 0;
+   cursor: pointer;
+   transition: all linear .3s;
+}
+#contact .contact_form button:hover{
+   border: none;
+   background-color: #cfc91d;
+   color: white;
+   box-shadow: 0 0 10px 0 white
+}
+
+/*contact css start*/
+/*footer css start*/
+footer{
+   background-color: black;
+   padding: 15px;
+   color: #797c81;
+}
+/* //footer css end*/
+ /* Back To Top Button Section Css Start */
+ #backToTop{
+   background:rgba(2,145,140,0.85);
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   border: 2px solid white;
+   line-height: 45px;
+   border-radius: 50%;
+   font-size: 28px;
+   color: white;
+   cursor: pointer;
+   position: fixed;
+   right: 50px;
+   bottom: 500px;
+   z-index: 9999;
+   opacity: 0;
+   transition: all ease-out .4s;
+   box-shadow: 0 0 7px 1px yellow;
+ }
+ /* //Back To Top Button Section Css End */
